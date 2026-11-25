@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Umucyo Coffee — Brand Identity Case Study | Prince Hirwa</title>
+<meta name="description" content="Umucyo Coffee: a concept brand identity for a Kigali specialty coffee bar. Logo, colour, typography, imigongo-inspired pattern and brand applications by Prince Hirwa Rutagengwa (Kai Labs)." />
+<meta name="theme-color" content="#1E1512" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://unpkg.com/lenis@1/dist/lenis.css" />
+<style>
+:root{
+  --volcano:#1E1512; --roast:#6B3E26; --amber:#F2A93B; --hill:#3E6B48; --cream:#F6EEDF; --clay:#C8643B; --mist:#E8DCC6;
+  --ink:#1E1512; --muted:#6d5c50;
+  --serif:"Fraunces",Georgia,serif; --sans:"DM Sans",system-ui,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}html.lenis{scroll-behavior:auto}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--clay);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+section{padding:120px 0;position:relative}
+.eyebrow{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--clay)}
+h1,h2,h3{font-family:var(--serif);font-weight:800;letter-spacing:-.02em;line-height:1.02}
+h2{font-size:clamp(2.2rem,5vw,3.8rem);margin:14px 0 18px}
+.lead{font-size:1.12rem;color:var(--muted);max-width:640px}
+.num{font-family:var(--serif);font-weight:600;color:var(--clay);font-size:1rem;margin-right:10px}
+
+/* top bar */
+.topbar{position:fixed;inset:16px 16px auto 16px;z-index:40;display:flex;justify-content:space-between;align-items:center;pointer-events:none}
+.pill{pointer-events:auto;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:rgba(30,21,18,.82);color:var(--cream);text-decoration:none;font-size:.86rem;font-weight:500;backdrop-filter:blur(10px);min-height:44px}
+.pill svg{width:16px;height:16px}
+.pill:hover{background:var(--volcano)}
+
+/* hero */
+.hero{min-height:100vh;background:var(--volcano);color:var(--cream);display:grid;place-items:center;text-align:center;overflow:hidden;padding:120px 0 80px}
+.hero .pattern-band{position:absolute;left:0;right:0;width:100%;height:46px;opacity:.9}
+.hero .pattern-band.top{top:0}.hero .pattern-band.bottom{bottom:0}
+.hero-mark{width:min(220px,46vw);margin:0 auto 26px}
+.hero h1{font-size:clamp(3.6rem,12vw,9rem);font-weight:600;letter-spacing:-.04em;line-height:.9}
+.hero .sub{margin-top:14px;font-size:.82rem;letter-spacing:.42em;text-transform:uppercase;color:var(--amber)}
+.hero .tag{margin-top:28px;font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,2.4vw,1.5rem);color:var(--mist)}
+.hero .concept{display:inline-block;margin-top:34px;padding:7px 14px;border:1px solid rgba(246,238,223,.25);border-radius:999px;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mist)}
+.scroll-cue{position:absolute;bottom:72px;left:50%;transform:translateX(-50%);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mist);opacity:.7}
+
+/* overview */
+.overview{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:start}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:28px;border-radius:22px;background:#fff;box-shadow:0 20px 50px -30px rgba(30,21,18,.35)}
+.meta small{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.meta b{font-weight:500}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:60px}
+.card{padding:28px;border-radius:22px;background:#fff;box-shadow:0 20px 50px -34px rgba(30,21,18,.4)}
+.card h3{font-size:1.5rem;margin-bottom:10px}
+.card p{color:var(--muted);font-size:.96rem}
+
+/* moodboard */
+.mood{background:var(--mist)}
+.mood-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:120px;gap:14px;margin-top:44px}
+.tile{border-radius:18px;display:flex;align-items:flex-end;padding:16px;font-family:var(--serif);font-size:1.25rem;font-weight:600;overflow:hidden;position:relative}
+.t1{grid-column:span 2;grid-row:span 2;background:var(--volcano);color:var(--amber)}
+.t2{grid-column:span 2;background:var(--amber);color:var(--volcano)}
+.t3{grid-column:span 2;grid-row:span 2;background:var(--hill);color:var(--cream)}
+.t4{background:var(--clay);color:var(--cream)}
+.t5{background:var(--roast);color:var(--cream)}
+.t6{grid-column:span 2;background:var(--cream);color:var(--roast);border:1px solid #d8c9ae}
+.t7{grid-column:span 2;background:var(--volcano)}
+.t8{grid-column:span 2;background:#fff;color:var(--ink);font-style:italic}
+.tile svg.fill{position:absolute;inset:0;width:100%;height:100%}
+
+/* logo */
+.logo-stage{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:50px}
+.construct{background:#fff;border-radius:26px;padding:40px;aspect-ratio:1;display:grid;place-items:center;box-shadow:0 30px 60px -40px rgba(30,21,18,.5)}
+.construct svg{width:100%;height:auto}
+.construct .guide{fill:none;stroke:#c9b9a0;stroke-width:.4;stroke-dasharray:2 2}
+.steps{display:grid;gap:18px}
+.step{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}
+.step .dot{width:40px;height:40px;border-radius:12px;background:var(--volcano);color:var(--amber);display:grid;place-items:center;font-family:var(--serif);font-weight:600}
+.step h4{font-family:var(--serif);font-size:1.2rem}
+.step p{color:var(--muted);font-size:.95rem}
+.variants{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:60px}
+.variant{border-radius:22px;aspect-ratio:1;display:grid;place-items:center;padding:28px;position:relative}
+.variant span{position:absolute;bottom:12px;left:16px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+.v1{background:var(--volcano);color:var(--cream)}
+.v2{background:#fff;color:var(--volcano);box-shadow:0 20px 50px -34px rgba(30,21,18,.4)}
+.v3{background:var(--amber);color:var(--volcano)}
+.v4{background:var(--hill);color:var(--cream)}
+.lockup{display:flex;flex-direction:column;align-items:center;gap:10px}
+.lockup svg{width:96px}
+.lockup .word{font-family:var(--serif);font-weight:600;font-size:2rem;letter-spacing:-.03em;line-height:1}
+.lockup .small{font-size:.58rem;letter-spacing:.38em;text-transform:uppercase}
+.mark-only svg{width:120px}
+
+/* colour */
+.colours{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr 1fr;gap:14px;margin-top:44px;height:340px}
+.sw{border-radius:20px;padding:18px;display:flex;flex-direction:column;justify-content:flex-end;transition:flex .5s var(--ease),transform .4s var(--ease);cursor:pointer;border:0;text-align:left;font:inherit;color:inherit}
+.sw:hover{transform:translateY(-6px)}
+.sw b{font-family:var(--serif);font-size:1.15rem;font-weight:600;display:block}
+.sw small{font-size:.78rem;opacity:.85;display:block;font-family:ui-monospace,Menlo,monospace}
+.sw em{font-style:normal;font-size:.74rem;opacity:.8;margin-top:6px;display:block}
+.copied{position:fixed;left:50%;bottom:30px;transform:translate(-50%,20px);background:var(--volcano);color:var(--cream);padding:10px 18px;border-radius:999px;font-size:.88rem;opacity:0;transition:opacity .3s,transform .3s;z-index:60;pointer-events:none}
+.copied.show{opacity:1;transform:translate(-50%,0)}
+
+/* type */
+.type{background:var(--volcano);color:var(--cream)}
+.type .lead{color:var(--mist)}
+.type-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;margin-top:44px}
+.specimen{border-radius:24px;padding:36px;background:rgba(246,238,223,.06);border:1px solid rgba(246,238,223,.12)}
+.specimen .big{font-family:var(--serif);font-size:clamp(5rem,12vw,9rem);line-height:.9;color:var(--amber)}
+.specimen .name{font-family:var(--serif);font-size:1.6rem;margin-top:16px}
+.specimen p{color:var(--mist);font-size:.95rem;margin-top:6px}
+.specimen.sans .big{font-family:var(--sans);font-weight:700;color:var(--cream)}
+.specimen.sans .name{font-family:var(--sans);font-weight:700}
+.scale{margin-top:28px;display:grid;gap:12px}
+.scale div{display:flex;align-items:baseline;gap:18px;border-top:1px solid rgba(246,238,223,.12);padding-top:12px}
+.scale small{width:70px;flex:none;color:var(--mist);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+
+/* pattern */
+.pattern-show{margin-top:44px;border-radius:26px;overflow:hidden;height:300px;position:relative}
+.pattern-show svg{width:calc(100% + 80px);height:100%}
+.pattern-note{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px}
+.pattern-note div{padding:22px;border-radius:18px;background:#fff}
+.pattern-note b{font-family:var(--serif);font-size:1.15rem}
+.pattern-note p{font-size:.92rem;color:var(--muted)}
+
+/* applications */
+.apps{background:var(--mist)}
+.app-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;margin-top:44px}
+.app{border-radius:26px;overflow:hidden;position:relative;min-height:340px;display:grid;place-items:center;padding:30px}
+.app figcaption{position:absolute;left:20px;bottom:16px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.a-cup{grid-column:span 2;background:var(--amber)}
+.a-bag{grid-column:span 2;background:var(--hill)}
+.a-bag figcaption{color:var(--cream)}
+.a-card{grid-column:span 2;background:#fff}
+.a-store{grid-column:span 4;background:linear-gradient(#bcd3df,#e9e2d3 70%);min-height:420px}
+.a-phone{grid-column:span 2;background:var(--volcano);min-height:420px}
+.a-phone figcaption{color:var(--cream)}
+.a-social{grid-column:span 6;background:#fff;min-height:auto;padding:40px}
+.a-cup svg,.a-bag svg{width:min(240px,80%)}
+.bcards{display:grid;gap:16px;width:100%;max-width:300px}
+.bcard{aspect-ratio:1.75;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 18px 30px -18px rgba(30,21,18,.6);transition:transform .5s var(--ease)}
+.bcard.front{background:var(--volcano);color:var(--cream);transform:rotate(-4deg)}
+.bcard.back{background:var(--cream);color:var(--volcano);transform:rotate(3deg) translateX(18px);position:relative;overflow:hidden}
+.a-card:hover .bcard.front{transform:rotate(0)}.a-card:hover .bcard.back{transform:rotate(0) translateX(0)}
+.bcard .word{font-family:var(--serif);font-weight:600;font-size:1.4rem;letter-spacing:-.02em}
+.bcard small{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--amber)}
+.bcard.back b{font-family:var(--serif);font-size:1rem}
+.bcard.back p{font-size:.66rem;color:var(--muted);line-height:1.5}
+.bcard.back .stripe{position:absolute;right:0;top:0;bottom:0;width:34px}
+.a-store svg{width:100%;max-width:640px}
+.phone{width:230px;border-radius:34px;background:var(--cream);padding:12px;box-shadow:0 30px 60px -20px #000;border:6px solid #2d2320}
+.phone .scr{border-radius:24px;overflow:hidden;background:var(--cream)}
+.phone .ph-top{background:var(--volcano);color:var(--cream);padding:18px 16px 16px}
+.phone .ph-top small{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--amber)}
+.phone .ph-top b{display:block;font-family:var(--serif);font-size:1.3rem;margin-top:4px;line-height:1.1}
+.phone .item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid #eadfcb}
+.phone .item i{width:36px;height:36px;border-radius:10px;flex:none}
+.phone .item div{flex:1;font-size:.74rem;line-height:1.3}
+.phone .item div b{display:block;font-size:.8rem}
+.phone .item span{font-size:.72rem;font-weight:700;color:var(--roast)}
+.phone .cta{margin:12px 14px 16px;padding:11px;border-radius:12px;background:var(--amber);text-align:center;font-weight:700;font-size:.8rem;color:var(--volcano)}
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;width:100%}
+.post{aspect-ratio:1;border-radius:18px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}
+.post .q{font-family:var(--serif);font-size:clamp(1.3rem,2.4vw,2rem);font-weight:600;line-height:1.05;position:relative}
+.post small{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;position:relative}
+.p1{background:var(--volcano);color:var(--cream)}
+.p1 .q em{color:var(--amber);font-style:italic}
+.p2{background:var(--amber);color:var(--volcano)}
+.p3{background:var(--hill);color:var(--cream)}
+.post svg.bg{position:absolute;inset:0;width:100%;height:100%;opacity:.25}
+
+/* voice */
+.voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.voice{padding:30px;border-radius:22px;background:#fff}
+.voice .q{font-family:var(--serif);font-size:1.6rem;line-height:1.15;margin:10px 0}
+.voice .rw{color:var(--clay);font-style:italic;font-family:var(--serif)}
+.voice p{color:var(--muted);font-size:.92rem}
+
+/* outro */
+.outro{background:var(--volcano);color:var(--cream);text-align:center}
+.outro h2{color:var(--amber)}
+.outro p{color:var(--mist);max-width:620px;margin:0 auto}
+.outro .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:700;text-decoration:none;min-height:48px}
+.btn.primary{background:var(--amber);color:var(--volcano)}
+.btn.ghost{border:1px solid rgba(246,238,223,.35);color:var(--cream)}
+.btn:hover{transform:translateY(-2px)}
+footer{background:var(--volcano);color:var(--mist);text-align:center;font-size:.82rem;padding:0 0 40px}
+
+@media (max-width:900px){
+  .overview,.logo-stage,.type-grid{grid-template-columns:1fr}
+  .cards3,.voice-grid,.pattern-note{grid-template-columns:1fr}
+  .variants{grid-template-columns:repeat(2,1fr)}
+  .colours{grid-template-columns:repeat(3,1fr);height:auto}
+  .sw{min-height:140px}
+  .mood-grid{grid-template-columns:repeat(2,1fr)}
+  .mood-grid .tile{grid-column:span 1!important;grid-row:span 1!important}
+  .app-grid{grid-template-columns:1fr}
+  .app{grid-column:span 1!important}
+  .posts{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- =========== SVG LIBRARY =========== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- The Umucyo mark: a coffee-bean sun rising over Rwanda's hills -->
+    <symbol id="mark" viewBox="0 0 120 120">
+      <clipPath id="markClip"><circle cx="60" cy="60" r="54"/></clipPath>
+      <circle cx="60" cy="60" r="54" fill="var(--m-bg, #1E1512)"/>
+      <g clip-path="url(#markClip)">
+        <g stroke="var(--m-sun, #F2A93B)" stroke-width="3.2" stroke-linecap="round">
+          <line x1="60" y1="14" x2="60" y2="22"/><line x1="33" y1="24" x2="38" y2="31"/><line x1="87" y1="24" x2="82" y2="31"/>
+          <line x1="18" y1="46" x2="26" y2="49"/><line x1="102" y1="46" x2="94" y2="49"/>
+        </g>
+        <g transform="rotate(-28 60 60)">
+          <ellipse cx="60" cy="60" rx="17" ry="25" fill="var(--m-sun, #F2A93B)"/>
+          <path d="M61 36 C52 48, 70 60, 60 72 S 58 82, 60 85" fill="none" stroke="var(--m-bg, #1E1512)" stroke-width="3.4" stroke-linecap="round"/>
+        </g>
+        <path d="M0 84 C 18 70, 34 70, 50 80 S 84 92, 120 72 L120 120 L0 120 Z" fill="var(--m-hill2, #3E6B48)"/>
+        <path d="M0 96 C 22 84, 46 86, 66 94 S 100 100, 120 88 L120 120 L0 120 Z" fill="var(--m-hill1, #C8643B)"/>
+      </g>
+    </symbol>
+
+    <!-- Imigongo-inspired pattern tile -->
+    <pattern id="imigongo" width="48" height="48" patternUnits="userSpaceOnUse">
+      <rect width="48" height="48" fill="#1E1512"/>
+      <path d="M0 24 L12 12 L24 24 L36 12 L48 24 L48 30 L36 18 L24 30 L12 18 L0 30 Z" fill="#F2A93B"/>
+      <path d="M0 48 L12 36 L24 48 Z M24 48 L36 36 L48 48 Z" fill="#C8643B"/>
+      <path d="M12 0 L24 10 L36 0 Z" fill="#F6EEDF"/>
+      <rect x="22" y="38" width="4" height="4" transform="rotate(45 24 40)" fill="#F6EEDF"/>
+    </pattern>
+    <pattern id="imigongoLight" width="48" height="48" patternUnits="userSpaceOnUse">
+      <rect width="48" height="48" fill="#F6EEDF"/>
+      <path d="M0 24 L12 12 L24 24 L36 12 L48 24 L48 30 L36 18 L24 30 L12 18 L0 30 Z" fill="#1E1512"/>
+      <path d="M0 48 L12 36 L24 48 Z M24 48 L36 36 L48 48 Z" fill="#C8643B"/>
+      <path d="M12 0 L24 10 L36 0 Z" fill="#3E6B48"/>
+    </pattern>
+    <pattern id="imigongoBig" width="120" height="120" patternUnits="userSpaceOnUse">
+      <rect width="120" height="120" fill="#1E1512"/>
+      <path d="M0 60 L30 30 L60 60 L90 30 L120 60 L120 74 L90 44 L60 74 L30 44 L0 74 Z" fill="#F2A93B"/>
+      <path d="M0 120 L30 90 L60 120 Z M60 120 L90 90 L120 120 Z" fill="#C8643B"/>
+      <path d="M30 0 L60 24 L90 0 Z" fill="#3E6B48"/>
+      <path d="M60 86 L70 96 L60 106 L50 96 Z" fill="#F6EEDF"/>
+      <path d="M0 0 L10 10 L0 20 Z M120 0 L110 10 L120 20 Z" fill="#F6EEDF"/>
+    </pattern>
+  </defs>
+</svg>
+
+<div class="topbar">
+  <a class="pill" href="https://hprince01.github.io/#portfolio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Back to portfolio</a>
+  <span class="pill" style="pointer-events:none">Case study · Brand identity</span>
+</div>
+
+<!-- =========== HERO =========== -->
+<header class="hero">
+  <svg class="pattern-band top" preserveAspectRatio="none" aria-hidden="true"><rect width="100%" height="100%" fill="url(#imigongo)"/></svg>
+  <div>
+    <svg class="hero-mark" viewBox="0 0 120 120" role="img" aria-label="Umucyo Coffee logo mark"><use href="#mark" style="--m-bg:#2a1d18"/></svg>
+    <h1 class="h-in">umucyo</h1>
+    <div class="sub h-in">Coffee · Kigali</div>
+    <p class="tag h-in">Light in every cup — <span lang="rw">umucyo mu gikombe</span>.</p>
+    <span class="concept h-in">Concept brand · Self-initiated project by Kai Labs</span>
+  </div>
+  <div class="scroll-cue">Scroll</div>
+  <svg class="pattern-band bottom" preserveAspectRatio="none" aria-hidden="true"><rect width="100%" height="100%" fill="url(#imigongo)"/></svg>
+</header>
+
+<!-- =========== OVERVIEW =========== -->
+<section>
+  <div class="wrap overview">
+    <div>
+      <span class="eyebrow reveal">Overview</span>
+      <h2 class="reveal">A coffee brand that tastes like a Kigali sunrise.</h2>
+      <p class="lead reveal">Umucyo (“light” in Kinyarwanda) is a concept specialty coffee bar in Kigali that serves single-origin beans from Rwanda’s highlands. The brief: build an identity that feels warm, proudly Rwandan and modern enough to stand next to global specialty brands.</p>
+    </div>
+    <div class="meta reveal">
+      <div><small>Client</small><b>Umucyo Coffee (concept)</b></div>
+      <div><small>Year</small><b>2026</b></div>
+      <div><small>Role</small><b>Brand designer</b></div>
+      <div><small>Scope</small><b>Logo, colour, type, pattern, applications</b></div>
+      <div><small>Designer</small><b>Prince Hirwa · Kai Labs</b></div>
+      <div><small>Location</small><b>Kigali, Rwanda</b></div>
+    </div>
+  </div>
+  <div class="wrap cards3">
+    <div class="card reveal"><span class="num">01</span><h3>Challenge</h3><p>Rwandan coffee is world-class, but local cafés often borrow generic “coffee shop” visuals. The brand needed to feel rooted at home and premium abroad.</p></div>
+    <div class="card reveal"><span class="num">02</span><h3>Idea</h3><p>Morning light breaking over the land of a thousand hills, where coffee grows. The sun becomes a coffee bean; the hills carry the colours of volcanic soil.</p></div>
+    <div class="card reveal"><span class="num">03</span><h3>Result</h3><p>A flexible system: a bold mark, a warm palette, an editorial serif, and a pattern inspired by imigongo, Rwanda’s traditional geometric art.</p></div>
+  </div>
+</section>
+
+<!-- =========== MOODBOARD =========== -->
+<section class="mood">
+  <div class="wrap">
+    <span class="eyebrow reveal">01 · Moodboard</span>
+    <h2 class="reveal">Volcanic soil, green hills, first light.</h2>
+    <p class="lead reveal">Research started with the places coffee comes from: the red earth of the northern volcanoes, terraced green hills, Lake Kivu at dawn, and the bold zigzags of imigongo art from Nyakarambi.</p>
+    <div class="mood-grid">
+      <div class="tile t1 reveal">Sunrise</div>
+      <div class="tile t2 reveal">Warmth</div>
+      <div class="tile t3 reveal">Thousand hills</div>
+      <div class="tile t4 reveal">Earth</div>
+      <div class="tile t5 reveal">Roast</div>
+      <div class="tile t6 reveal">Craft &amp; care</div>
+      <div class="tile t7 reveal" aria-label="Imigongo pattern"><svg class="fill" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="url(#imigongo)"/></svg></div>
+      <div class="tile t8 reveal">“Come for coffee, stay for the light.”</div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== LOGO =========== -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow reveal">02 · Logo</span>
+    <h2 class="reveal">The sun is a coffee bean.</h2>
+    <p class="lead reveal">Built on a circle grid so it holds up from a 16 px app icon to a storefront sign.</p>
+    <div class="logo-stage">
+      <div class="construct reveal">
+        <svg viewBox="0 0 120 120" role="img" aria-label="Logo construction with grid lines">
+          <use href="#mark"/>
+          <g id="guides">
+            <circle class="guide" cx="60" cy="60" r="54"/>
+            <circle class="guide" cx="60" cy="60" r="40"/>
+            <circle class="guide" cx="60" cy="60" r="25"/>
+            <line class="guide" x1="0" y1="60" x2="120" y2="60"/>
+            <line class="guide" x1="60" y1="0" x2="60" y2="120"/>
+            <line class="guide" x1="0" y1="0" x2="120" y2="120"/>
+            <line class="guide" x1="120" y1="0" x2="0" y2="120"/>
+            <ellipse class="guide" cx="60" cy="60" rx="17" ry="25" transform="rotate(-28 60 60)" style="stroke:#C8643B;stroke-dasharray:none;stroke-width:.6"/>
+          </g>
+        </svg>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div class="dot">1</div><div><h4>The bean sun</h4><p>A coffee bean tilted at 28° reads as a rising sun. Its crease is drawn as one S-curve, like a path up a hill.</p></div></div>
+        <div class="step reveal"><div class="dot">2</div><div><h4>Rays of morning</h4><p>Five short rays: calm, not loud. They give the mark energy without clutter at small sizes.</p></div></div>
+        <div class="step reveal"><div class="dot">3</div><div><h4>Two hills</h4><p>Green for the plantations, clay red for volcanic soil, cropped by the circle to suggest many more hills beyond.</p></div></div>
+        <div class="step reveal"><div class="dot">4</div><div><h4>Lowercase wordmark</h4><p>“umucyo” in Fraunces SemiBold, set tight and lowercase: friendly, editorial and confident.</p></div></div>
+      </div>
+    </div>
+
+    <div class="variants">
+      <div class="variant v1 reveal"><div class="lockup"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#mark" style="--m-bg:#2d211c"/></svg><div class="word">umucyo</div><div class="small" style="color:#F2A93B">Coffee · Kigali</div></div><span>Primary · dark</span></div>
+      <div class="variant v2 reveal"><div class="lockup"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#mark"/></svg><div class="word">umucyo</div><div class="small" style="color:#C8643B">Coffee · Kigali</div></div><span>Primary · light</span></div>
+      <div class="variant v3 reveal mark-only"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#mark" style="--m-bg:#1E1512;--m-sun:#F6EEDF;--m-hill1:#F2A93B;--m-hill2:#6B3E26"/></svg><span>Mark · amber</span></div>
+      <div class="variant v4 reveal mark-only"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#mark" style="--m-bg:#F6EEDF;--m-sun:#3E6B48;--m-hill1:#3E6B48;--m-hill2:#9DB89F"/></svg><span>Mark · one colour</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== COLOUR =========== -->
+<section style="padding-top:40px">
+  <div class="wrap">
+    <span class="eyebrow reveal">03 · Colour</span>
+    <h2 class="reveal">A palette dug from the ground.</h2>
+    <p class="lead reveal">Six colours named after the journey of a bean. Click a swatch to copy its hex code.</p>
+    <div class="colours">
+      <button class="sw reveal" style="background:#1E1512;color:#F6EEDF" data-hex="#1E1512"><b>Volcano</b><small>#1E1512</small><em>Base · backgrounds, text</em></button>
+      <button class="sw reveal" style="background:#F2A93B;color:#1E1512" data-hex="#F2A93B"><b>Sunrise</b><small>#F2A93B</small><em>Accent · highlights</em></button>
+      <button class="sw reveal" style="background:#3E6B48;color:#F6EEDF" data-hex="#3E6B48"><b>Hill</b><small>#3E6B48</small><em>Nature · packaging</em></button>
+      <button class="sw reveal" style="background:#C8643B;color:#F6EEDF" data-hex="#C8643B"><b>Clay</b><small>#C8643B</small><em>Warmth · calls to action</em></button>
+      <button class="sw reveal" style="background:#6B3E26;color:#F6EEDF" data-hex="#6B3E26"><b>Roast</b><small>#6B3E26</small><em>Depth · secondary</em></button>
+      <button class="sw reveal" style="background:#F6EEDF;color:#1E1512;border:1px solid #d8c9ae" data-hex="#F6EEDF"><b>Cream</b><small>#F6EEDF</small><em>Paper · space</em></button>
+    </div>
+  </div>
+</section>
+
+<!-- =========== TYPE =========== -->
+<section class="type">
+  <div class="wrap">
+    <span class="eyebrow reveal" style="color:var(--amber)">04 · Typography</span>
+    <h2 class="reveal">Editorial warmth, everyday clarity.</h2>
+    <p class="lead reveal">A soft, high-contrast serif for personality; a clean geometric sans for menus, labels and screens.</p>
+    <div class="type-grid">
+      <div class="specimen reveal">
+        <div class="big">Aa</div>
+        <div class="name">Fraunces</div>
+        <p>Headlines, wordmark, quotes. SemiBold &amp; ExtraBold.</p>
+        <div class="scale">
+          <div><small>H1</small><span style="font-family:var(--serif);font-size:2.4rem;font-weight:800;line-height:1">Ikawa nziza</span></div>
+          <div><small>H2</small><span style="font-family:var(--serif);font-size:1.6rem;font-weight:600">Single origin, Huye</span></div>
+          <div><small>Quote</small><span style="font-family:var(--serif);font-size:1.2rem;font-style:italic">Light in every cup.</span></div>
+        </div>
+      </div>
+      <div class="specimen sans reveal">
+        <div class="big">Aa</div>
+        <div class="name">DM Sans</div>
+        <p>Body, menus, UI. Regular, Medium &amp; Bold.</p>
+        <div class="scale">
+          <div><small>Body</small><span>Washed Bourbon · notes of red fruit &amp; honey</span></div>
+          <div><small>Label</small><span style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700">Lake Kivu · 1,700 m</span></div>
+          <div><small>Price</small><span style="font-weight:700">RWF 2,500</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== PATTERN =========== -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow reveal">05 · Pattern</span>
+    <h2 class="reveal">Inspired by imigongo.</h2>
+    <p class="lead reveal">Imigongo is a Rwandan art form of bold geometric relief panels from the east of the country. The Umucyo pattern takes its rhythm (zigzags, triangles and diamonds) and recolours it with the brand palette.</p>
+    <div class="pattern-show reveal"><svg preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="100%" height="100%" fill="url(#imigongoBig)"/></svg></div>
+    <div class="pattern-note">
+      <div class="reveal"><b>Zigzag = hills</b><p>The main line echoes the rolling horizon in the logo.</p></div>
+      <div class="reveal"><b>Triangles = roofs &amp; terraces</b><p>Grounded shapes that frame packaging edges and cup sleeves.</p></div>
+      <div class="reveal"><b>Diamond = the bean</b><p>A small accent used as a bullet, a divider or a stamp.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== APPLICATIONS =========== -->
+<section class="apps">
+  <div class="wrap">
+    <span class="eyebrow reveal">06 · Applications</span>
+    <h2 class="reveal">From the cup to the street.</h2>
+    <p class="lead reveal">The identity applied across the touchpoints of a real café.</p>
+    <div class="app-grid">
+      <!-- Cup -->
+      <figure class="app a-cup reveal">
+        <svg viewBox="0 0 200 260" role="img" aria-label="Takeaway cup with Umucyo branding">
+          <ellipse cx="100" cy="246" rx="62" ry="8" fill="#1E1512" opacity=".18"/>
+          <path d="M44 52 L156 52 L144 240 Q100 250 56 240 Z" fill="#F6EEDF"/>
+          <path d="M51 120 L149 120 L144 186 L56 186 Z" fill="url(#imigongoLight)"/>
+          <path d="M52 132 L148 132 L145 174 L55 174 Z" fill="#1E1512"/>
+          <svg x="64" y="136" width="34" height="34" viewBox="0 0 120 120"><use href="#mark" style="--m-bg:#2d211c"/></svg>
+          <text x="104" y="157" font-family="Fraunces" font-weight="600" font-size="17" fill="#F6EEDF">umucyo</text>
+          <text x="104" y="167" font-family="DM Sans" font-weight="700" font-size="5" letter-spacing="2" fill="#F2A93B">COFFEE · KIGALI</text>
+          <path d="M38 40 Q100 30 162 40 L160 54 L40 54 Z" fill="#1E1512"/>
+          <rect x="36" y="38" width="128" height="8" rx="4" fill="#2d211c"/>
+          <path d="M66 46 L134 46" stroke="#F2A93B" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+        </svg>
+        <figcaption>Takeaway cup</figcaption>
+      </figure>
+      <!-- Bag -->
+      <figure class="app a-bag reveal">
+        <svg viewBox="0 0 200 260" role="img" aria-label="Coffee bag packaging">
+          <ellipse cx="100" cy="248" rx="70" ry="8" fill="#000" opacity=".25"/>
+          <path d="M38 40 L162 40 L170 240 L30 240 Z" fill="#1E1512"/>
+          <path d="M38 40 L162 40 L164 70 L36 70 Z" fill="#2d211c"/>
+          <path d="M44 30 L156 30 L162 40 L38 40 Z" fill="#F2A93B"/>
+          <rect x="52" y="88" width="96" height="124" rx="6" fill="#F6EEDF"/>
+          <rect x="52" y="88" width="96" height="18" fill="url(#imigongo)"/>
+          <svg x="84" y="114" width="32" height="32" viewBox="0 0 120 120"><use href="#mark"/></svg>
+          <text x="100" y="164" text-anchor="middle" font-family="Fraunces" font-weight="600" font-size="18" fill="#1E1512">umucyo</text>
+          <text x="100" y="178" text-anchor="middle" font-family="DM Sans" font-weight="700" font-size="5.5" letter-spacing="1.6" fill="#C8643B">HUYE HIGHLANDS · WASHED</text>
+          <text x="100" y="196" text-anchor="middle" font-family="DM Sans" font-size="6" fill="#6d5c50">Red fruit · Honey · Black tea</text>
+          <text x="100" y="206" text-anchor="middle" font-family="DM Sans" font-weight="700" font-size="6" fill="#1E1512">250 g</text>
+        </svg>
+        <figcaption>Retail bag</figcaption>
+      </figure>
+      <!-- Business cards -->
+      <figure class="app a-card reveal">
+        <div class="bcards">
+          <div class="bcard front">
+            <svg viewBox="0 0 120 120" style="width:44px" aria-hidden="true"><use href="#mark" style="--m-bg:#2d211c"/></svg>
+            <div><div class="word">umucyo</div><small>Coffee · Kigali</small></div>
+          </div>
+          <div class="bcard back">
+            <svg class="stripe" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="100%" height="100%" fill="url(#imigongo)"/></svg>
+            <div><b>Head Roaster</b><p>Umucyo Coffee</p></div>
+            <p>hello@umucyo.coffee<br />KN 4 Ave · Kigali, Rwanda</p>
+          </div>
+        </div>
+        <figcaption>Business cards</figcaption>
+      </figure>
+      <!-- Storefront -->
+      <figure class="app a-store reveal">
+        <svg viewBox="0 0 640 380" role="img" aria-label="Umucyo café storefront">
+          <path d="M0 300 C 120 250, 220 260, 330 285 S 540 300, 640 260 L640 380 L0 380 Z" fill="#9DB89F" opacity=".55"/>
+          <rect x="80" y="70" width="480" height="270" fill="#F6EEDF"/>
+          <rect x="80" y="70" width="480" height="26" fill="url(#imigongo)"/>
+          <rect x="70" y="96" width="500" height="70" fill="#1E1512"/>
+          <svg x="196" y="104" width="54" height="54" viewBox="0 0 120 120"><use href="#mark" style="--m-bg:#2d211c"/></svg>
+          <text x="262" y="142" font-family="Fraunces" font-weight="600" font-size="40" fill="#F6EEDF">umucyo</text>
+          <text x="264" y="157" font-family="DM Sans" font-weight="700" font-size="9" letter-spacing="4" fill="#F2A93B">COFFEE · KIGALI</text>
+          <g>
+            <path d="M80 166 L560 166 L548 200 L92 200 Z" fill="#F2A93B"/>
+            <g fill="#C8643B"><path d="M92 200 L116 200 L104 166 L80 166 Z"/><path d="M164 200 L188 200 L176 166 L152 166 Z"/><path d="M236 200 L260 200 L248 166 L224 166 Z"/><path d="M308 200 L332 200 L320 166 L296 166 Z"/><path d="M380 200 L404 200 L392 166 L368 166 Z"/><path d="M452 200 L476 200 L464 166 L440 166 Z"/><path d="M524 200 L548 200 L548 166 L512 166 Z"/></g>
+          </g>
+          <rect x="110" y="214" width="170" height="126" fill="#3a2b25"/>
+          <rect x="118" y="222" width="154" height="110" fill="#bcd3df" opacity=".55"/>
+          <rect x="300" y="214" width="90" height="126" fill="#6B3E26"/>
+          <circle cx="376" cy="282" r="3" fill="#F2A93B"/>
+          <rect x="410" y="214" width="120" height="126" fill="#3a2b25"/>
+          <rect x="418" y="222" width="104" height="110" fill="#bcd3df" opacity=".55"/>
+          <rect x="430" y="300" width="80" height="26" rx="4" fill="#1E1512"/>
+          <text x="470" y="317" text-anchor="middle" font-family="DM Sans" font-weight="700" font-size="9" fill="#F2A93B">OPEN · 7AM</text>
+          <rect x="60" y="340" width="520" height="10" fill="#cbbfa8"/>
+          <circle cx="150" cy="300" r="22" fill="#3E6B48"/><rect x="146" y="300" width="8" height="40" fill="#6B3E26"/>
+        </svg>
+        <figcaption>Storefront</figcaption>
+      </figure>
+      <!-- Phone -->
+      <figure class="app a-phone reveal">
+        <div class="phone" role="img" aria-label="Mobile ordering screen">
+          <div class="scr">
+            <div class="ph-top"><small>Good morning</small><b>What’s lighting up your day?</b></div>
+            <div class="item"><i style="background:#F2A93B"></i><div><b>Sunrise Latte</b>Huye beans · honey</div><span>2,500</span></div>
+            <div class="item"><i style="background:#6B3E26"></i><div><b>Volcano Espresso</b>Double shot</div><span>1,800</span></div>
+            <div class="item"><i style="background:#3E6B48"></i><div><b>Hill Cold Brew</b>18 h steep</div><span>3,000</span></div>
+            <div class="cta">Order for pickup →</div>
+          </div>
+        </div>
+        <figcaption>Mobile ordering</figcaption>
+      </figure>
+      <!-- Social -->
+      <figure class="app a-social reveal">
+        <div class="posts">
+          <div class="post p1"><small>@umucyo.coffee</small><div class="q">Light in<br /><em>every</em> cup.</div></div>
+          <div class="post p2"><svg class="bg" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="100%" height="100%" fill="url(#imigongo)"/></svg><small>New arrival</small><div class="q">Lake Kivu<br />Natural</div></div>
+          <div class="post p3"><small>Kinyarwanda word of the day</small><div class="q">Umucyo<br /><span style="font-size:.6em;font-style:italic;font-weight:400">(n.) light, brightness</span></div></div>
+        </div>
+        <figcaption style="position:static;margin-top:18px">Instagram posts</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- =========== VOICE =========== -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow reveal">07 · Voice</span>
+    <h2 class="reveal">Warm, proud, a little poetic.</h2>
+    <p class="lead reveal">Bilingual by default: English for visitors, Kinyarwanda for home.</p>
+    <div class="voice-grid">
+      <div class="voice reveal"><span class="eyebrow">Greeting</span><div class="q">Good morning, sunshine.</div><div class="rw" lang="rw">Mwaramutse!</div><p>On cups, receipts and the app’s first screen.</p></div>
+      <div class="voice reveal"><span class="eyebrow">Promise</span><div class="q">From our hills to your hands.</div><div class="rw" lang="rw">Kuva ku misozi yacu, kugeza mu biganza byawe.</div><p>On bags and the “about” page.</p></div>
+      <div class="voice reveal"><span class="eyebrow">Invitation</span><div class="q">Come for coffee, stay for the light.</div><div class="rw" lang="rw">Ngwino unywe ikawa.</div><p>On the storefront and social posts.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== OUTRO =========== -->
+<section class="outro">
+  <div class="wrap">
+    <svg viewBox="0 0 120 120" style="width:90px;margin:0 auto 20px" aria-hidden="true"><use href="#mark" style="--m-bg:#2d211c"/></svg>
+    <span class="eyebrow" style="color:var(--mist)">Thanks for scrolling</span>
+    <h2>Let’s build your brand next.</h2>
+    <p>Umucyo is a self-initiated concept project. I design identities that are rooted in place and built to work everywhere.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://hprince01.github.io/#contact">Work with me</a>
+      <a class="btn ghost" href="https://hprince01.github.io/projects/poster-lab/">Next project: Kai Poster Lab →</a>
+    </div>
+  </div>
+</section>
+<footer>© <span id="y"></span> Prince Hirwa Rutagengwa · Kai Labs. Umucyo Coffee is a fictional brand created for this portfolio.</footer>
+
+<div class="copied" id="copied" role="status"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1/dist/lenis.min.js"></script>
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// copy hex
+const toast = document.getElementById('copied');
+document.querySelectorAll('.sw').forEach(b => b.addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(b.dataset.hex); toast.textContent = b.dataset.hex + ' copied'; }
+  catch { toast.textContent = b.dataset.hex; }
+  toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 1400);
+}));
+
+if (!reduce && window.gsap){
+  gsap.registerPlugin(ScrollTrigger);
+  if (window.Lenis){ const l = new Lenis({lerp:.09}); l.on('scroll', ScrollTrigger.update); gsap.ticker.add(t => l.raf(t*1000)); gsap.ticker.lagSmoothing(0); }
+  // hero: mark rises like the sun
+  gsap.from('.hero-mark', {y:80, scale:.7, opacity:0, duration:1.6, ease:'expo.out'});
+  gsap.from('.h-in', {y:30, opacity:0, duration:1, stagger:.12, delay:.4, ease:'power3.out'});
+  gsap.to('.hero-mark', {y:-60, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'bottom top', scrub:true}});
+  gsap.utils.toArray('.reveal').forEach(el => gsap.from(el, {y:40, opacity:0, duration:1, ease:'power3.out', scrollTrigger:{trigger:el, start:'top 88%'}}));
+  // construction guides draw in
+  gsap.from('#guides > *', {opacity:0, duration:.6, stagger:.12, scrollTrigger:{trigger:'.construct', start:'top 75%'}});
+  // pattern slowly drifts
+  gsap.to('.pattern-show svg', {x:-60, ease:'none', scrollTrigger:{trigger:'.pattern-show', start:'top bottom', end:'bottom top', scrub:true}});
+}
+</script>
+</body>
+</html>
