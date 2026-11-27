@@ -1,6 +1,6 @@
 # ☕ Umucyo Coffee — Brand Identity Case Study
 
-**Live case study → [hprince01.github.io/projects/umucyo](https://hprince01.github.io/projects/umucyo/)**
+**Live case study → [princehirwa.pages.dev/projects/umucyo](https://princehirwa.pages.dev/projects/umucyo/)**
 
 Umucyo (*“light”* in Kinyarwanda) is a **concept specialty coffee bar in Kigali, Rwanda**. This self-initiated project builds its full visual identity and presents it as an interactive, scroll-animated case study.
 
@@ -24,5 +24,5 @@ Morning light breaking over the *land of a thousand hills*, where coffee grows. 
 Open `index.html` in a browser — no build step.
 
 ---
-Designed & coded by **Prince Hirwa Rutagengwa · [Kai Labs](https://hprince01.github.io/)** — Kigali, Rwanda.  
+Designed & coded by **Prince Hirwa Rutagengwa · [Kai Labs](https://princehirwa.pages.dev/)** — Kigali, Rwanda.  
 *Umucyo Coffee is a fictional brand created for this portfolio.*
